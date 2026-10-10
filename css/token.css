@@ -1,0 +1,54 @@
+/* Palet Warna */
+:root {
+  --color-ink: #061a23;
+  --color-dark-teal: #06373a;
+  --color-teal: #1f5f5b;
+  --color-green: #159947;
+  --color-light-green: #49b265;
+
+  /* Warna Halaman */
+  --color-background: #f7f8f7;
+  --color-surface: #ffffff;
+  --color-text: var(--color-ink);
+  --color-muted: #63736d;
+  --color-border: #dce4df;
+  --color-focus: var(--color-teal);
+
+  /* Warna Kontainer */
+  --color-container: #edf2ef;
+  --color-container-text: var(--color-dark-teal);
+  --color-card: var(--color-surface);
+  --color-card-text: var(--color-ink);
+  --color-card-muted: var(--color-muted);
+  --color-card-border: var(--color-border);
+  --color-card-focus: var(--color-focus);
+
+  /* Warna Tombol */
+  --color-primary: var(--color-teal);
+  --color-primary-text: var(--color-surface);
+  --color-primary-hover: var(--color-dark-teal);
+  --color-danger: var(--color-dark-teal);
+  --color-danger-soft: var(--color-surface);
+  --color-danger-hover: #e5ede8;
+
+  /* Warna Prioritas */
+  --color-low: var(--color-dark-teal);
+  --color-low-soft: #edf7ef;
+  --color-medium: var(--color-teal);
+  --color-medium-soft: #e8f0ee;
+  --color-high: var(--color-dark-teal);
+  --color-high-soft: #dce8e4;
+
+  /* Font */
+  --font-family: Arial, sans-serif;
+
+  /* Jarak */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  /* Ukuran */
+  --radius: 0.625rem;
+  --content-width: 60rem;
+}

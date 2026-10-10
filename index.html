@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/token.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <!-- Header -->
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">DAILY PLANNER</p>
+          <h1>To Do List</h1>
+        </div>
+        <p id="current-date"></p>
+      </header>
+
+      <!-- Profil -->
+      <section class="card" aria-labelledby="profile-heading">
+        <h2 id="profile-heading">Profil</h2>
+        <div class="profile-fields">
+          <div class="field">
+            <label for="profile-name">Nama</label>
+            <input id="profile-name" type="text" placeholder="Nama kamu" maxlength="60" />
+          </div>
+          <div class="field">
+            <label for="profile-role">Jabatan</label>
+            <input id="profile-role" type="text" placeholder="Jabatan kamu" maxlength="60" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Tugas -->
+      <section class="card" aria-labelledby="form-heading">
+        <h2 id="form-heading">Tambah tugas</h2>
+        <form id="task-form">
+          <div class="field">
+            <label for="task-text">Tugas</label>
+            <textarea id="task-text" rows="3" placeholder="Apa yang ingin kamu kerjakan?" maxlength="500" required></textarea>
+          </div>
+          <div class="form-actions">
+            <div class="field">
+              <label for="task-priority">Prioritas</label>
+              <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <button class="button button-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Filter Tanggal -->
+      <div class="toolbar">
+        <div class="field">
+          <label for="date-filter">Tanggal tugas</label>
+          <input id="date-filter" type="date" />
+        </div>
+        <button id="delete-all" class="button button-danger" type="button">Delete All</button>
+      </div>
+
+      <!-- Daftar Tugas -->
+      <div class="task-columns">
+        <section class="card" aria-labelledby="todo-heading">
+          <div class="section-heading">
+            <h2 id="todo-heading">To Do</h2>
+            <span id="todo-count" class="count">0</span>
+          </div>
+          <ul id="todo-list" class="task-list"></ul>
+          <p id="todo-empty" class="empty-state">Belum ada tugas untuk tanggal ini.</p>
+        </section>
+        <section class="card" aria-labelledby="done-heading">
+          <div class="section-heading">
+            <h2 id="done-heading">Done</h2>
+            <span id="done-count" class="count">0</span>
+          </div>
+          <ul id="done-list" class="task-list"></ul>
+          <p id="done-empty" class="empty-state">Belum ada tugas yang selesai.</p>
+        </section>
+      </div>
+      <p id="status-message" class="status-message" role="status"></p>
+    </main>
+
+    <!-- Template Tugas -->
+    <template id="task-template">
+      <li class="task-item">
+        <input class="task-checkbox" type="checkbox" />
+        <div class="task-content">
+          <p class="task-title"></p>
+          <div class="task-meta">
+            <span class="badge"></span>
+            <time class="task-date"></time>
+          </div>
+        </div>
+        <button class="delete-task" type="button">Delete</button>
+      </li>
+    </template>
+  </body>
+</html>

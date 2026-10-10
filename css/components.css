@@ -1,0 +1,230 @@
+/* Heading */
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 1.125rem;
+  color: var(--color-card-text);
+}
+
+.app-header .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-teal);
+  margin-bottom: var(--space-1);
+}
+
+/* Card */
+.card {
+  min-width: 0;
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  background: var(--color-card);
+  color: var(--color-card-text);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius);
+}
+
+.card > h2,
+.section-heading {
+  margin-bottom: var(--space-2);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  padding: 0.125rem 0.625rem;
+  border-radius: var(--radius);
+  background: var(--color-background);
+  color: var(--color-teal);
+  font-size: 0.875rem;
+}
+
+/* Form */
+.field {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-1);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.card :focus-visible {
+  outline-color: var(--color-card-focus);
+}
+
+/* Button */
+.button {
+  min-height: 44px;
+  padding: 0.625rem var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--space-1);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-primary {
+  color: var(--color-primary-text);
+  background: var(--color-primary);
+}
+
+.button-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.button-danger {
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border-color: var(--color-border);
+}
+
+.button-danger:hover {
+  background: var(--color-danger-hover);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Task */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: start;
+  gap: var(--space-1);
+  padding-block: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.task-checkbox {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 3px 0 0;
+  accent-color: var(--color-green);
+  cursor: pointer;
+}
+
+.task-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-title {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.is-done .task-title {
+  text-decoration: line-through;
+  color: var(--color-card-muted);
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--color-card-muted);
+}
+
+.delete-task {
+  min-height: 44px;
+  padding: 0 var(--space-1);
+  border: 0;
+  border-radius: var(--space-1);
+  background: transparent;
+  color: var(--color-card-text);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.delete-task:hover {
+  background: var(--color-danger-hover);
+  color: var(--color-danger);
+}
+
+/* Priority */
+.badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.badge.low {
+  color: var(--color-low);
+  background: var(--color-low-soft);
+  border-left: 2px solid var(--color-light-green);
+}
+
+.badge.medium {
+  color: var(--color-medium);
+  background: var(--color-medium-soft);
+}
+
+.badge.high {
+  color: var(--color-high);
+  background: var(--color-high-soft);
+}
+
+/* Status */
+.empty-state,
+.status-message {
+  font-size: 0.875rem;
+}
+
+.status-message {
+  color: var(--color-muted);
+}
+
+.empty-state {
+  color: var(--color-card-muted);
+  padding-block: var(--space-3);
+  text-align: center;
+}
